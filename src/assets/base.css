@@ -1,10 +1,15 @@
 body {
-    background: linear-gradient(to right, rgba(59, 130, 246, 0.5), rgba(37, 99, 235, 0.5)), 
-                url('./img.jpg');
-    background-size: cover, 400% 400%;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.5), rgba(37, 99, 235, 0.5)),
+                url('./img.jpg') no-repeat center center fixed;
+    background-size: cover, cover; /* Ensures both the gradient and image cover the whole screen */
     background-blend-mode: overlay;
     animation: gradient 10s ease infinite;
     height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes gradient {

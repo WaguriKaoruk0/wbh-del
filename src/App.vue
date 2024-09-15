@@ -24,7 +24,7 @@
   </div>
 
   <div class="content">
-    <h1 class="webhook-deleter">youtube.com/@XDash_o</h1>
+    <h1 class="webhook-deleter">ᴡᴇʙʜᴏᴏᴋ ɴᴜᴋᴇʀ/ᴅᴇʟᴇᴛᴇʀ</h1>
   </div>
 
   <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
@@ -37,8 +37,8 @@
   </div>
 
   <div class="footer">
-    <p class="madewith-text">made with ♥ by Dash.</p>
-    <a href="https://github.com/ColdGuy69/wbh-del">
+    <p class="madewith-text">made by Dash.</p>
+    <a href="https://youtube.com/@XDash_o">
       <img src="./assets/gh.svg" alt="github logo" class="gh-logo">
     </a>
   </div>

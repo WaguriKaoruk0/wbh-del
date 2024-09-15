@@ -12,3 +12,5 @@ A simple Vue-based web application that simplifies the process of deleting Disco
 
 - Vue 3 + Vite
 - Vanilla CSS
+
+## Created By Dash

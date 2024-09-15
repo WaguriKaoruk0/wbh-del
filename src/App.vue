@@ -27,7 +27,9 @@
     <h1 class="webhook-deleter">ᴡᴇʙʜᴏᴏᴋ ɴᴜᴋᴇʀ/ᴅᴇʟᴇᴛᴇʀ</h1>
   </div>
 
-  <label for="webhook-deleter" class="webhook-url-label">youtube.com/XDash_o</label>
+<a href="https://www.youtube.com/@XDash_o" class="webhook-url-label" target="_blank" rel="noopener noreferrer">
+    youtube.com/@XDash_o
+</a>
   
   <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
   <div class="webhook-input">

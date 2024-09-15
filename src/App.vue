@@ -26,8 +26,8 @@
   <div class="content">
     <h1 class="webhook-deleter">ᴡᴇʙʜᴏᴏᴋ ɴᴜᴋᴇʀ/ᴅᴇʟᴇᴛᴇʀ</h1>
   </div>
-  <h1 class="webhook-deleter">youtube.com/@XDash_o</h1>
-  </div>
+
+  <label for="webhook-deleter" class="webhook-url-label">youtube.com/XDash_o</label>
   
   <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
   <div class="webhook-input">

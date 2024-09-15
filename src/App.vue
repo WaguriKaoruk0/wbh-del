@@ -19,9 +19,9 @@
 </div>
 
    <div class="content">
-        <h1 class="webhook-deleter">discord webhook deleter</h1>
+        <h1 class="webhook-deleter">youtube.com/@XDash_o</h1>
     </div>
-        <label for="webhook-url" class="webhook-url-label">enter webhook url:</label>
+        <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
         <div class="webhook-input">
 			<input type="text"  @input="handleInput" v-model="webhookurl" class="webhook-url-input-box" id="webhook-url" placeholder="discord.com/api/webhooks/...">
         </div>
@@ -30,8 +30,8 @@
        </div>
 	
 	   <div class="footer">
-		<p class="madewith-text">made with ♥ by spreehertz.</p>
-		<a href="https://github.com/spreehertz/webhook-deleter">
+		<p class="madewith-text">made with ♥ by Dash.</p>
+		<a href="https://github.com/ColdGuy69/wbh-del">
 			<img src="./assets/gh.svg" alt="github logo" style="height: 1.5rem; width: 1.5rem;">
 		</a>
 	   </div>

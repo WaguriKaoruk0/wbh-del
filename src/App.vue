@@ -27,6 +27,8 @@
     <h1 class="webhook-deleter">ᴡᴇʙʜᴏᴏᴋ ɴᴜᴋᴇʀ/ᴅᴇʟᴇᴛᴇʀ</h1>
   </div>
 
+ <label for="webhook-url" class="webhook-url-label">youtube.com/@XDash_o</label>
+
   <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
   <div class="webhook-input">
     <input type="text" @input="handleInput" v-model="webhookurl" class="webhook-url-input-box" id="webhook-url" placeholder="discord.com/api/webhooks/...">

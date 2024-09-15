@@ -1,31 +1,25 @@
 <template>
-  <!-- Success Message -->
   <div v-if="showSuccess" class="alert-container success-container" role="alert">
     <svg aria-hidden="true" class="alert-svg" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
     </svg>
     <div>
       <span class="font-medium">Success!</span> The webhook has been successfully deleted.
-      <a @click="hideMessage('success')">
-        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </a>
+      <a @click="hideMessage('success')"><svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg></a>
     </div>
   </div>
 
-  <!-- Error Message -->
   <div v-if="showError" class="alert-container error-container" role="alert">
     <svg aria-hidden="true" class="alert-svg" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
     </svg>
     <div>
       <span class="font-medium">Error:</span> {{ errorMessage }}
-      <a @click="hideMessage('error')">
-        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </a>
+      <a @click="hideMessage('error')"><svg class="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg></a>
     </div>
   </div>
 
@@ -42,7 +36,6 @@
     <button @click="deleteWebhook" class="delete-btn">Delete</button>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
     <p class="madewith-text">made by Dash.</p>
     <a href="https://github.com/1nOnlyDash">
@@ -50,6 +43,52 @@
     </a>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: "App",
+  data() {
+    return {
+      webhookurl: '',
+      errorMessage: null,
+      showSuccess: false,
+      showError: false,
+    };
+  },
+
+  methods: {
+    deleteWebhook() {
+      axios.delete(this.webhookurl)
+        .then(() => {
+          this.showMessage('success');
+        })
+        .catch((error) => {
+          console.error(error);
+          this.errorMessage = error.response ? error.response.data.message : 'An unexpected error occurred';
+          this.showMessage('error');
+        });
+    },
+    handleInput(event) {
+      this.webhookurl = event.target.value;
+    },
+    showMessage(type) {
+      if (type === 'success') {
+        this.showSuccess = true;
+        setTimeout(() => this.showSuccess = false, 3000);
+      } else if (type === 'error') {
+        this.showError = true;
+        setTimeout(() => this.showError = false, 5000);
+      }
+    },
+    hideMessage(type) {
+      if (type === 'success') this.showSuccess = false;
+      if (type === 'error') this.showError = false;
+    }
+  }
+};
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
@@ -116,13 +155,10 @@ body {
   background: rgb(210, 58, 61);
 }
 
-/* Alert Styles */
 .alert-container {
   display: flex;
-  position: fixed; /* Fixed instead of absolute */
-  top: 10px;
-  right: 10px;
-  z-index: 999; /* Ensure it's above other content */
+  position: absolute;
+  right: 0;
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 0.5rem;
@@ -156,8 +192,7 @@ body {
 }
 
 .footer {
-  margin-top: auto; /* Push footer to bottom */
-  padding-bottom: 20px; /* Ensure padding at the bottom */
+  padding-top: 20rem;
   text-align: center;
 }
 

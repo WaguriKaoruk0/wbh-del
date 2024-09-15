@@ -38,7 +38,7 @@
 
   <div class="footer">
     <p class="madewith-text">made by Dash.</p>
-    <a href="https://youtube.com/@XDash_o">
+    <a href="https://github.com/1nOnlyDash">
       <img src="./assets/gh.svg" alt="github logo" class="gh-logo">
     </a>
   </div>

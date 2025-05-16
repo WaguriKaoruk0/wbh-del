@@ -27,8 +27,8 @@
     <h1 class="webhook-deleter">ᴡᴇʙʜᴏᴏᴋ ɴᴜᴋᴇʀ/ᴅᴇʟᴇᴛᴇʀ</h1>
   </div>
 
-<a href="https://www.youtube.com/@XDash_o" class="webhook-url-label" target="_blank" rel="noopener noreferrer">
-    youtube.com/@XDash_o
+<a href="https://www.youtube.com/@RudeusNotosGreyrat" class="webhook-url-label" target="_blank" rel="noopener noreferrer">
+    youtube.com/@RudeusNotosGreyrat
 </a>
   
   <label for="webhook-url" class="webhook-url-label">ᴇɴᴛᴇʀ ᴡᴇʙʜᴏᴏᴋ ᴜʀʟ:</label>
@@ -41,8 +41,8 @@
   </div>
 
   <div class="footer">
-    <p class="madewith-text">made by Dash.</p>
-    <a href="https://github.com/1nOnlyDash">
+    <p class="madewith-text">made by Rudeus.</p>
+    <a href="https://github.com/RudeusNotosGreyrat">
       <img src="./assets/gh.svg" alt="github logo" class="gh-logo">
     </a>
   </div>
